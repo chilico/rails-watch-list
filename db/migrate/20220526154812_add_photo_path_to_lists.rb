@@ -1,0 +1,5 @@
+class AddPhotoPathToLists < ActiveRecord::Migration[7.0]
+  def change
+    add_column :lists, :photo_path, :string
+  end
+end
