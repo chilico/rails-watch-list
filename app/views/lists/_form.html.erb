@@ -5,7 +5,7 @@
 
     <div class="form-inputs justify w-75">
       <%= f.input :name %>
-      <%= f.input :photo_path %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     </div>
 
     <div class="form-actions">
