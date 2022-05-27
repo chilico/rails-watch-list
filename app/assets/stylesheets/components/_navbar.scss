@@ -2,6 +2,12 @@
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
+
+  h3 {
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
 
 .navbar-lewagon-white {

@@ -1,16 +1,16 @@
 <div class="container m-4">
-  <%= simple_form_for(@list) do |f| %>
+  <%= simple_form_for([@list, @bookmark]) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs justify w-75">
-      <%= f.input :name %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.association :movie, collection: @movies %>
+      <%= f.input :comment %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, class: "btn btn-success rounded-pill" %>
-      <%= link_to "Back", root_path, class: "btn btn-dark rounded-pill" %>
+      <%= link_to "Back", list_path(@list), class: "btn btn-dark rounded-pill" %>
     </div>
   <% end %>
 </div>

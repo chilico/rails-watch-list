@@ -5,10 +5,14 @@
   </div>
 </div>
 
+<div class="container text-center">
+  <%= link_to "Add List", new_list_path, class: "btn btn-outline-dark rounded-pill m-4" %>
+</div>
+
 <div class="container">
   <div class="row justify-content-center">
     <% @lists.each do |list| %>
-      <div class="my_card col-3 m-4 px-4 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_url(list.photo_path) %>')">
+      <div class="list_card col-12 col-md-6 col-lg-3 m-4 px-4 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photos.first.key %>');">
         <h3><%= list.name %></h3>
         <%= link_to "View list", list, class: "btn btn-outline-light rounded-pill m-4" %>
       </div>

@@ -3,8 +3,8 @@
   data-action="scroll@window->navbar#updateNavbar"
 >
   <div class="container-fluid">
-    <a class="navbar-brand" href="/lists">
-      <img class="reel" src="<%= asset_url('film.png') %>" />
+    <a class="navbar-brand" href="<%= root_path %>">
+      <h3>Watch List</h3>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,10 +13,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= asset_url('user.png') %>" />
+            <img class="avatar dropdown-toggle reel" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= asset_url('film.png') %>" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="<%= root_path %>">View Lists</a>
+              <a class="dropdown-item" href="<%= new_list_path %>">Create a List</a>
             </div>
           </li>
       </ul>
