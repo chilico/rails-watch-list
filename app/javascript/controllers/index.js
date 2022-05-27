@@ -9,6 +9,3 @@ application.register("hello", HelloController)
 
 import NavbarController from "./navbar_controller.js"
 application.register("navbar", NavbarController)
-
-import TypedJsController from "./typed_js_controller.js"
-application.register("typed-js", TypedJsController)
